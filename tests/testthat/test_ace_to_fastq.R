@@ -1,5 +1,5 @@
 context("ACE to FASTQ conversion")
-filename <- system.file("sampledat/1.seq.ace", package = "ace2fq")
+filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 testdir <- tempdir()
 
 test_that("conversion works", {
