@@ -91,6 +91,9 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ace2fastq)</a></code></pre></div>
+<div id="introduction" class="section level1">
+<h1 class="hasAnchor">
+<a href="#introduction" class="anchor"></a>Introduction</h1>
 <p>A simple function for ‘.ace’ files converts ABI ‘Sanger’ capillary sequence assembly files. Each file only contains one sequence and corresponding quality values.</p>
 <p>The function expects as a minimum a full path to the .ace file. By default a corresponding file with .fastq extension instead of .ace will be created. Also by default, the id line in the fastq file start after the obligatory @ with the name of the original .ace file without the extension followed by the internal original id from the .ace file.</p>
 <p>A default example follows:</p>
@@ -115,9 +118,17 @@
 <a class="sourceLine" id="cb4-7" title="7">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a></code></pre></div>
 <pre><code>#&gt; [1] "@CO Contig1 1489 2 12 U"</code></pre>
 <p>The target directory path can also be changed.</p>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+        <div id="tocnav">
+      <h2 class="hasAnchor">
+<a href="#tocnav" class="anchor"></a>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+<li><a href="#introduction">Introduction</a></li>
+      </ul>
+</div>
       </div>
 
 </div>

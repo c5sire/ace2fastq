@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(ace2fastq)
 ```
+# Introduction
 
 A simple function for '.ace' files converts ABI 'Sanger' capillary sequence assembly files. Each file only contains one sequence and corresponding quality values.
 

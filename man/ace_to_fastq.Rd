@@ -17,7 +17,7 @@ ace_to_fastq(filename, target_dir = dirname(filename), name2id = TRUE)
 target file name
 }
 \description{
-ace_to_fastq
+Converts a sequence in .ace file format to .fastq format.
 }
 \examples{
 if (interactive()) {

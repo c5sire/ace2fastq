@@ -1,5 +1,6 @@
-
 #' ace_to_fastq
+#' 
+#' Converts a sequence in .ace file format to .fastq format.
 #'
 #' @param filename .ace file
 #' @param target_dir target directory
