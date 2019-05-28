@@ -7,7 +7,7 @@ test_that("conversion works", {
   file.info(target_name)
 
   expect_true(file.exists(target_name))
-  expect_true(file.info(target_name)$size == 3019)
+  expect_true(file.info(target_name)$size > 3000)
 
   id_expected <- "@ 1.seq   CO Contig1 1489 2 12 U"
   txt <- readLines(target_name)
