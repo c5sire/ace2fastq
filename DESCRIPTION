@@ -4,7 +4,7 @@ Title: ACE File To FASTQ Converter
 Version: 0.1.0
 Authors@R: person("Reinhard", "Simon", email = "rsimon64@cgiar.org",
                   role = c("aut", "cre"),
-                  comment = c(ORCID = "https://orcid.org/0000-0002-4608-9077")
+                  comment = c(ORCID = "0000-0002-4608-9077")
                   )
 Description: Converts a sequence in .ace file format to .fastq format.
 Imports: stringr

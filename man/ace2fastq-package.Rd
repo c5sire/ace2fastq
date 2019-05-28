@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Reinhard Simon \email{rsimon64@cgiar.org} (https://orcid.org/0000-0002-4608-9077)
+\strong{Maintainer}: Reinhard Simon \email{rsimon64@cgiar.org} (0000-0002-4608-9077)
 
 }
 \keyword{internal}
