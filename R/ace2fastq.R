@@ -40,9 +40,9 @@ ace_to_fastq <- function(filename,
   # prepare id line
   filebase <- stringr::str_replace(basename(filename), ".ace", "")
   if (name2id) {
-    id <- paste("@", filebase, " ", id)
+    id <- paste0("@", filebase, " ", id)
   } else {
-    id <- paste("@", id)
+    id <- paste0("@", id)
   }
 
   # prepare resulting final fastq lines
