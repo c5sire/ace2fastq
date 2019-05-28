@@ -1,0 +1,118 @@
+{
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
+  "@type": "SoftwareSourceCode",
+  "identifier": "ace2fastq",
+  "description": "Converts a sequence in .ace file format to .fastq format.",
+  "name": "ace2fastq: ACE File To FASTQ Converter",
+  "license": "https://spdx.org/licenses/GPL-3.0",
+  "version": "0.1.0",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "version": "3.5.3",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 3.5.3 (2019-03-11)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Reinhard",
+      "familyName": "Simon",
+      "email": "rsimon64@cgiar.org",
+      "@id": "https://orcid.org/0000-0002-4608-9077"
+    }
+  ],
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {},
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Reinhard",
+      "familyName": "Simon",
+      "email": "rsimon64@cgiar.org",
+      "@id": "https://orcid.org/0000-0002-4608-9077"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "covr",
+      "name": "covr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=covr"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "stringr",
+      "name": "stringr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=stringr"
+    }
+  ],
+  "codeRepository": "https://github.com/c5sire/ace2fastq",
+  "releaseNotes": "https://github.com/c5sire/ace2fastq/blob/master/NEWS.md",
+  "readme": "https://github.com/c5sire/ace2fastq/blob/master/README.md",
+  "fileSize": "8.87KB",
+  "contIntegration": [
+    "https://ci.appveyor.com/project/c5sire/ace2fastq",
+    "https://travis-ci.org/c5sire/ace2fastq",
+    "https://codecov.io/gh/c5sire/ace2fastq?branch=master"
+  ],
+  "developmentStatus": [
+    "https://www.repostatus.org/#active",
+    "https://www.tidyverse.org/lifecycle/#maturing"
+  ],
+  "issueTracker": "https://github.com/c5sire/ace2fastq/issues"
+}

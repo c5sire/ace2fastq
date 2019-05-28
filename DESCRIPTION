@@ -2,8 +2,10 @@ Package: ace2fastq
 Type: Package
 Title: ACE File To FASTQ Converter
 Version: 0.1.0
-Author: Reinhard Simon
-Maintainer: Reinhard Simon <rsimon64@gmail.com>
+Authors@R: person("Reinhard", "Simon", email = "rsimon64@cgiar.org",
+                  role = c("aut", "cre"),
+                  comment = c(ORCID = "https://orcid.org/0000-0002-4608-9077")
+                  )
 Description: Converts a sequence in .ace file format to .fastq format.
 Imports: stringr
 License: GPL-3
@@ -16,3 +18,5 @@ Suggests:
     rmarkdown,
     covr
 VignetteBuilder: knitr
+URL: https://github.com/c5sire/ace2fastq
+BugReports: https://github.com/c5sire/ace2fastq/issues
