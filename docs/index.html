@@ -77,21 +77,21 @@
     
     
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-<div id="ace2fq" class="section level1">
+<div id="ace2fastq" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#ace2fq" class="anchor"></a>ace2fq</h1></div>
+<a href="#ace2fastq" class="anchor"></a>ace2fastq</h1></div>
 <!-- badges: start -->
 
-<p>The goal of ace2fq is to provide a utility function that converts ‘.ace’ files (ABI ‘Sanger’ capillary sequence assembly files) to a standard .fastq files</p>
+<p>The goal of ace2fastq is to provide a utility function that converts ‘.ace’ files (ABI ‘Sanger’ capillary sequence assembly files) to a standard .fastq files</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of ace2fq from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"ace2fq"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"ace2fastq"</span>)</a></code></pre></div>
 <p>Latest version can be installed from github:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(devtools)</a>
 <a class="sourceLine" id="cb2-2" title="2"></a>
-<a class="sourceLine" id="cb2-3" title="3">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"c5sire/ace2fq"</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb2-3" title="3">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"c5sire/ace2fastq"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -100,7 +100,7 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ace2fastq)</a>
 <a class="sourceLine" id="cb3-2" title="2"></a>
 <a class="sourceLine" id="cb3-3" title="3"></a>
-<a class="sourceLine" id="cb3-4" title="4">filename &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"sampledat/1.seq.ace"</span>, <span class="dt">package =</span> <span class="st">"ace2fq"</span>)</a>
+<a class="sourceLine" id="cb3-4" title="4">filename &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"sampledat/1.seq.ace"</span>, <span class="dt">package =</span> <span class="st">"ace2fastq"</span>)</a>
 <a class="sourceLine" id="cb3-5" title="5"></a>
 <a class="sourceLine" id="cb3-6" title="6">out_file &lt;-<span class="st"> </span><span class="kw"><a href="reference/ace_to_fastq.html">ace_to_fastq</a></span>(filename)</a>
 <a class="sourceLine" id="cb3-7" title="7"></a>
@@ -136,7 +136,7 @@
       <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://ci.appveyor.com/project/c5sire/ace2fq"><img src="https://ci.appveyor.com/api/projects/status/github/c5sire/ace2fq?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://ci.appveyor.com/project/c5sire/ace2fastq"><img src="https://ci.appveyor.com/api/projects/status/github/c5sire/ace2fastq?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 </ul>
 </div>
 </div>
