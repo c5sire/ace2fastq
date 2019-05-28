@@ -20,13 +20,11 @@ target file name
 ace_to_fastq
 }
 \examples{
-if(interactive()) {
+if (interactive()) {
   library(ace2fastq)
   filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
   ace_to_fastq(filename)
 }
-
-
 }
 \author{
 Reinhard Simon

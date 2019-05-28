@@ -3,7 +3,6 @@ filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 testdir <- tempdir()
 
 test_that("conversion works", {
-
   target_name <- ace_to_fastq(filename = filename, target_dir = testdir)
   file.info(target_name)
 
@@ -17,8 +16,10 @@ test_that("conversion works", {
 })
 
 test_that("id parameter works", {
-  target_name <- ace_to_fastq(filename = filename, target_dir = testdir,
-                        name2id = FALSE)
+  target_name <- ace_to_fastq(
+    filename = filename, target_dir = testdir,
+    name2id = FALSE
+  )
   id_expected <- "@ CO Contig1 1489 2 12 U"
   txt <- readLines(target_name)
 

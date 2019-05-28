@@ -10,27 +10,30 @@
 #' @export
 #'
 #' @examples
-#' if(interactive()) {
+#' if (interactive()) {
 #'   library(ace2fastq)
 #'   filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 #'   ace_to_fastq(filename)
 #' }
-#'
-#'
-ace_to_fastq <- function(filename, target_dir = dirname(filename), name2id = TRUE) {
+ace_to_fastq <- function(filename,
+                         target_dir = dirname(filename),
+                         name2id = TRUE) {
+  stopifnot(file.exists(filename))
+  stopifnot(dir.exists(target_dir))
+  stopifnot(is.logical(name2id))
 
   lines <- readLines(filename)
 
   # read and combine sequences
   id <- stringr::str_trim(lines[3])
-  eofq <- which(lines == "")[2]
-  seqs <- paste(lines[4:eofq], collapse = "")
+  eofs <- which(lines == "")[2] # get start of sequence lines
+  seqs <- paste(lines[4:eofs], collapse = "") # get all sequence lines
 
   # read, combine, and transform quality values
-  svls <- eofq + 2
-  evls <- which(lines == "")[3]
-  qvls <- paste( lines[svls:evls], collapse = "")
-  qvls <- stringr::str_split(stringr::str_trim(qvls), " ")
+  svls <- eofs + 2 # get start of quality value lines
+  evls <- which(lines == "")[3] # get end of sequence lines
+  qvls <- paste(lines[svls:evls], collapse = "") # get all quality lines
+  qvls <- stringr::str_split(stringr::str_trim(qvls), " ") # separate
   qvls <- as.integer(qvls[[1]]) + 33
   qvls <- paste(sapply(qvls, intToUtf8), collapse = "")
 
@@ -55,5 +58,3 @@ ace_to_fastq <- function(filename, target_dir = dirname(filename), name2id = TRU
 
   return(target_name)
 }
-
-
