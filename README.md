@@ -5,8 +5,17 @@
 
 <!-- badges: start -->
 
+[![Project Status: Active â€“ The project has reached a stable, usable
+state and is being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/c5sire/ace2fastq?branch=master&svg=true)](https://ci.appveyor.com/project/c5sire/ace2fastq)
+[![Travis build
+status](https://travis-ci.org/c5sire/ace2fastq.svg?branch=master)](https://travis-ci.org/c5sire/ace2fastq)
+[![Codecov test
+coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)](https://codecov.io/gh/c5sire/ace2fastq?branch=master)
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
 The goal of ace2fastq is to provide a utility function that converts
