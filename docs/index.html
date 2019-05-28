@@ -90,7 +90,7 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p>The goal of ace2fastq is to provide a utility function that converts ‘.ace’ files (ABI ‘Sanger’ capillary sequence assembly files) to a standard .fastq files</p>
+<p>The package provides a function that converts ‘.ace’ files (ABI ‘Sanger’ capillary sequence assembly files) to standard .fastq files.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -112,17 +112,11 @@
 <a class="sourceLine" id="cb3-5" title="5"></a>
 <a class="sourceLine" id="cb3-6" title="6">out_file &lt;-<span class="st"> </span><span class="kw"><a href="reference/ace_to_fastq.html">ace_to_fastq</a></span>(filename)</a>
 <a class="sourceLine" id="cb3-7" title="7"></a>
-<a class="sourceLine" id="cb3-8" title="8">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a>
-<a class="sourceLine" id="cb3-9" title="9"></a>
-<a class="sourceLine" id="cb3-10" title="10">n &lt;-<span class="st"> </span><span class="dv">40</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">1</span>], <span class="dv">1</span>, n)</a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="co">#&gt; [1] "@ 1.seq   CO Contig1 1489 2 12 U"</span></a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">2</span>], <span class="dv">60</span>, <span class="dv">60</span><span class="op">+</span>n)</a>
-<a class="sourceLine" id="cb3-14" title="14"><span class="co">#&gt; [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"</span></a>
-<a class="sourceLine" id="cb3-15" title="15"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">3</span>], <span class="dv">1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb3-16" title="16"><span class="co">#&gt; [1] "+"</span></a>
-<a class="sourceLine" id="cb3-17" title="17"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">4</span>], <span class="dv">60</span>, <span class="dv">60</span><span class="op">+</span>n)</a>
-<a class="sourceLine" id="cb3-18" title="18"><span class="co">#&gt; [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUU"</span></a></code></pre></div>
+<a class="sourceLine" id="cb3-8" title="8">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a></code></pre></div>
+<pre><code>#&gt; [1] "@ 1.seq   CO Contig1 1489 2 12 U"
+#&gt; [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"
+#&gt; [1] "+"
+#&gt; [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUU"</code></pre>
 </div>
 </div>
   </div>

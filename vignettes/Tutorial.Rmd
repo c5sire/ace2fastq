@@ -33,15 +33,18 @@ out_file <- ace_to_fastq(filename)
 
 lines <- readLines(out_file)
 
-n <- 60
+```
+
+```{r echo=FALSE}
+# shortened lines
+n <- 40
 substr(lines[1], 1, n)
 substr(lines[2], 60, 60+n)
 substr(lines[3], 1, 1)
 substr(lines[4], 60, 60+n)
 
 ```
-
-A example with alternative id follows:
+A example with the alternative id pattern follows:
 
 ```{r}
 library(ace2fastq)
@@ -51,13 +54,10 @@ filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 out_file <- ace_to_fastq(filename, name2id = FALSE)
 
 lines <- readLines(out_file)
+```
 
-n <- 60
+```{r echo=FALSE}
 substr(lines[1], 1, n)
-substr(lines[2], 60, 60+n)
-substr(lines[3], 1, 1)
-substr(lines[4], 60, 60+n)
-
 ```
 
 The target directory path can also be changed.

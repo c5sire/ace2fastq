@@ -100,35 +100,20 @@
 <a class="sourceLine" id="cb2-4" title="4"></a>
 <a class="sourceLine" id="cb2-5" title="5">out_file &lt;-<span class="st"> </span><span class="kw"><a href="../reference/ace_to_fastq.html">ace_to_fastq</a></span>(filename)</a>
 <a class="sourceLine" id="cb2-6" title="6"></a>
-<a class="sourceLine" id="cb2-7" title="7">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a>
-<a class="sourceLine" id="cb2-8" title="8"></a>
-<a class="sourceLine" id="cb2-9" title="9">n &lt;-<span class="st"> </span><span class="dv">60</span></a>
-<a class="sourceLine" id="cb2-10" title="10"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">1</span>], <span class="dv">1</span>, n)</a>
-<a class="sourceLine" id="cb2-11" title="11"><span class="co">#&gt; [1] "@ 1.seq   CO Contig1 1489 2 12 U"</span></a>
-<a class="sourceLine" id="cb2-12" title="12"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">2</span>], <span class="dv">60</span>, <span class="dv">60</span><span class="op">+</span>n)</a>
-<a class="sourceLine" id="cb2-13" title="13"><span class="co">#&gt; [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGGTAACCTGCCTGTAAGACTGG"</span></a>
-<a class="sourceLine" id="cb2-14" title="14"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">3</span>], <span class="dv">1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb2-15" title="15"><span class="co">#&gt; [1] "+"</span></a>
-<a class="sourceLine" id="cb2-16" title="16"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">4</span>], <span class="dv">60</span>, <span class="dv">60</span><span class="op">+</span>n)</a>
-<a class="sourceLine" id="cb2-17" title="17"><span class="co">#&gt; [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUUUNUINNINUNUNUUUUNNUU"</span></a></code></pre></div>
-<p>A example with alternative id follows:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ace2fastq)</a>
-<a class="sourceLine" id="cb3-2" title="2"></a>
-<a class="sourceLine" id="cb3-3" title="3">filename &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"sampledat/1.seq.ace"</span>, <span class="dt">package =</span> <span class="st">"ace2fastq"</span>)</a>
-<a class="sourceLine" id="cb3-4" title="4"></a>
-<a class="sourceLine" id="cb3-5" title="5">out_file &lt;-<span class="st"> </span><span class="kw"><a href="../reference/ace_to_fastq.html">ace_to_fastq</a></span>(filename, <span class="dt">name2id =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb3-6" title="6"></a>
-<a class="sourceLine" id="cb3-7" title="7">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a>
-<a class="sourceLine" id="cb3-8" title="8"></a>
-<a class="sourceLine" id="cb3-9" title="9">n &lt;-<span class="st"> </span><span class="dv">60</span></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">1</span>], <span class="dv">1</span>, n)</a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="co">#&gt; [1] "@ CO Contig1 1489 2 12 U"</span></a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">2</span>], <span class="dv">60</span>, <span class="dv">60</span><span class="op">+</span>n)</a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="co">#&gt; [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGGTAACCTGCCTGTAAGACTGG"</span></a>
-<a class="sourceLine" id="cb3-14" title="14"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">3</span>], <span class="dv">1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb3-15" title="15"><span class="co">#&gt; [1] "+"</span></a>
-<a class="sourceLine" id="cb3-16" title="16"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/substr">substr</a></span>(lines[<span class="dv">4</span>], <span class="dv">60</span>, <span class="dv">60</span><span class="op">+</span>n)</a>
-<a class="sourceLine" id="cb3-17" title="17"><span class="co">#&gt; [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUUUNUINNINUNUNUUUUNNUU"</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-7" title="7">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a></code></pre></div>
+<pre><code>#&gt; [1] "@ 1.seq   CO Contig1 1489 2 12 U"
+#&gt; [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"
+#&gt; [1] "+"
+#&gt; [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUU"</code></pre>
+<p>A example with the alternative id pattern follows:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ace2fastq)</a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3">filename &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"sampledat/1.seq.ace"</span>, <span class="dt">package =</span> <span class="st">"ace2fastq"</span>)</a>
+<a class="sourceLine" id="cb4-4" title="4"></a>
+<a class="sourceLine" id="cb4-5" title="5">out_file &lt;-<span class="st"> </span><span class="kw"><a href="../reference/ace_to_fastq.html">ace_to_fastq</a></span>(filename, <span class="dt">name2id =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb4-6" title="6"></a>
+<a class="sourceLine" id="cb4-7" title="7">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a></code></pre></div>
+<pre><code>#&gt; [1] "@ CO Contig1 1489 2 12 U"</code></pre>
 <p>The target directory path can also be changed.</p>
   </div>
 

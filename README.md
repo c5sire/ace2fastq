@@ -19,9 +19,8 @@ coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)]
 
 <!-- badges: end -->
 
-The goal of ace2fastq is to provide a utility function that converts
-‘.ace’ files (ABI ‘Sanger’ capillary sequence assembly files) to a
-standard .fastq files
+The package provides a function that converts ‘.ace’ files (ABI ‘Sanger’
+capillary sequence assembly files) to standard .fastq files.
 
 ## Installation
 
@@ -53,14 +52,9 @@ filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 out_file <- ace_to_fastq(filename)
 
 lines <- readLines(out_file)
-
-n <- 40
-substr(lines[1], 1, n)
-#> [1] "@ 1.seq   CO Contig1 1489 2 12 U"
-substr(lines[2], 60, 60+n)
-#> [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"
-substr(lines[3], 1, 1)
-#> [1] "+"
-substr(lines[4], 60, 60+n)
-#> [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUU"
 ```
+
+    #> [1] "@ 1.seq   CO Contig1 1489 2 12 U"
+    #> [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"
+    #> [1] "+"
+    #> [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUU"
