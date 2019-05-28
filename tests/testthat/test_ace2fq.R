@@ -1,0 +1,26 @@
+context("ACE to FASTQ conversion")
+filename <- system.file("sampledat/1.seq.ace", package = "ace2fq")
+testdir <- tempdir()
+
+test_that("conversion works", {
+
+  target_name <- ace_to_fastq(filename = filename, target_dir = testdir)
+  file.info(target_name)
+
+  expect_true(file.exists(target_name))
+  expect_true(file.info(target_name)$size == 3019)
+
+  id_expected <- "@ 1.seq   CO Contig1 1489 2 12 U"
+  txt <- readLines(target_name)
+
+  expect_true(id_expected == txt[1])
+})
+
+test_that("id parameter works", {
+  target_name <- ace_to_fastq(filename = filename, target_dir = testdir,
+                        name2id = FALSE)
+  id_expected <- "@ CO Contig1 1489 2 12 U"
+  txt <- readLines(target_name)
+
+  expect_true(id_expected == txt[1])
+})
