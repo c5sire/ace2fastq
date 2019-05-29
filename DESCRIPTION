@@ -1,12 +1,12 @@
 Package: ace2fastq
 Type: Package
-Title: ACE File To FASTQ Converter
-Version: 0.2.0
+Title: ACE File to FASTQ Converter
+Version: 0.3.0
 Authors@R: person("Reinhard", "Simon", email = "rsimon64@gmail.com",
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0002-4608-9077")
                   )
-Description: Converts a sequence in .ace file format to .fastq format.
+Description: Converts a sequence in ACE file format to FASTQ format.
 Imports: stringr
 License: GPL-3
 Encoding: UTF-8

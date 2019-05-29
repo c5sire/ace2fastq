@@ -5,10 +5,10 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "ace2fastq",
-  "description": "Converts a sequence in .ace file format to .fastq format.",
-  "name": "ace2fastq: ACE File To FASTQ Converter",
+  "description": "Converts a sequence in ACE file format to FASTQ format.",
+  "name": "ace2fastq: ACE File to FASTQ Converter",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -104,7 +104,7 @@
   "codeRepository": "https://github.com/c5sire/ace2fastq",
   "releaseNotes": "https://github.com/c5sire/ace2fastq/blob/master/NEWS.md",
   "readme": "https://github.com/c5sire/ace2fastq/blob/master/README.md",
-  "fileSize": "9.085KB",
+  "fileSize": "9.091KB",
   "contIntegration": [
     "https://ci.appveyor.com/project/c5sire/ace2fastq",
     "https://travis-ci.org/c5sire/ace2fastq",
