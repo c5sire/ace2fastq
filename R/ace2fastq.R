@@ -19,9 +19,11 @@
 ace_to_fastq <- function(filename,
                          target_dir = dirname(filename),
                          name2id = TRUE) {
+  stopifnot(stringr::str_ends(filename, ".ace"))
   stopifnot(file.exists(filename))
   stopifnot(dir.exists(target_dir))
   stopifnot(is.logical(name2id))
+  
 
   lines <- readLines(filename)
 

@@ -25,3 +25,20 @@ test_that("id parameter works", {
 
   expect_true(id_expected == txt[1])
 })
+
+
+test_that("error checks on parameters work", {
+  expect_error(
+    ace_to_fastq("x-32143")
+  )
+  expect_error(
+    ace_to_fastq("x-32143.ace")
+  )
+  expect_error(
+    ace_to_fastq(filename = filename, target_dir = "x")
+  )
+  expect_error(
+    ace_to_fastq(filename = filename, target_dir = testdir, 
+                 name2id = "x")
+  )
+})

@@ -54,7 +54,7 @@ out_file <- ace_to_fastq(filename)
 lines <- readLines(out_file)
 ```
 
-    #> [1] "@ 1.seq   CO Contig1 1489 2 12 U"
+    #> [1] "@1.seq CO Contig1 1489 2 12 U"
     #> [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"
     #> [1] "+"
     #> [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUU"
