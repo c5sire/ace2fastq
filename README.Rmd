@@ -23,11 +23,11 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The package provides a function that converts '.ace' files (ABI 'Sanger' capillary sequence assembly files) to standard .fastq files.
+The package provides a function that converts ".ace" files (ABI Sanger capillary sequence assembly files) to standard ".fastq" files.
 
 ## Installation
 
-You can install the released version of ace2fq from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of ace2fastq from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("ace2fastq")

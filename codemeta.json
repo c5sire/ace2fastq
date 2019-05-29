@@ -21,7 +21,7 @@
       "@type": "Person",
       "givenName": "Reinhard",
       "familyName": "Simon",
-      "email": "rsimon64@cgiar.org",
+      "email": "rsimon64@gmail.com",
       "@id": "https://orcid.org/0000-0002-4608-9077"
     }
   ],
@@ -33,7 +33,7 @@
       "@type": "Person",
       "givenName": "Reinhard",
       "familyName": "Simon",
-      "email": "rsimon64@cgiar.org",
+      "email": "rsimon64@gmail.com",
       "@id": "https://orcid.org/0000-0002-4608-9077"
     }
   ],
@@ -104,7 +104,7 @@
   "codeRepository": "https://github.com/c5sire/ace2fastq",
   "releaseNotes": "https://github.com/c5sire/ace2fastq/blob/master/NEWS.md",
   "readme": "https://github.com/c5sire/ace2fastq/blob/master/README.md",
-  "fileSize": "9.09KB",
+  "fileSize": "9.085KB",
   "contIntegration": [
     "https://ci.appveyor.com/project/c5sire/ace2fastq",
     "https://travis-ci.org/c5sire/ace2fastq",

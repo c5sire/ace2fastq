@@ -2,7 +2,7 @@
 #' 
 #' Converts a sequence in .ace file format to .fastq format.
 #' 
-#' @section ace2fastq functioniality:
+#' @section ace2fastq functionality:
 #' 
 #' See: \code{\link{ace_to_fastq}}
 #'

@@ -19,12 +19,12 @@ coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)]
 
 <!-- badges: end -->
 
-The package provides a function that converts ‘.ace’ files (ABI ‘Sanger’
-capillary sequence assembly files) to standard .fastq files.
+The package provides a function that converts “.ace” files (ABI Sanger
+capillary sequence assembly files) to standard “.fastq” files.
 
 ## Installation
 
-You can install the released version of ace2fq from
+You can install the released version of ace2fastq from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
