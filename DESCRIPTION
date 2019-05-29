@@ -1,12 +1,18 @@
 Package: ace2fastq
 Type: Package
 Title: ACE File to FASTQ Converter
-Version: 0.3.0
+Version: 0.4.0
 Authors@R: person("Reinhard", "Simon", email = "rsimon64@gmail.com",
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0002-4608-9077")
                   )
-Description: Converts a sequence in ACE file format to FASTQ format.
+Description: The ACE file format is currently used in genomics
+  to store contigs from ABI sequencing machines. 
+  To the best of our knowledge, no R function is available to convert 
+  this format into the more popular fastq file format. 
+  The development was motivated in the context of the analysis of 
+  16S metagenomic data by the need to convert the ACE files received
+  from a sequencing service for further analysis.
 Imports: stringr
 License: GPL-3
 Encoding: UTF-8
