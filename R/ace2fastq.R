@@ -5,7 +5,7 @@
 #' @param filename .ace file
 #' @param target_dir target directory
 #' @param name2id use the file name as primary id or not. Default is TRUE.
-#' @import stringr
+#' @importFrom stringr str_ends str_trim str_replace
 #' @return target file name
 #' @author Reinhard Simon
 #' @export
@@ -38,7 +38,7 @@ ace_to_fastq <- function(filename,
   qvls <- paste(lines[svls:evls], collapse = "") # get all quality lines
   qvls <- stringr::str_split(stringr::str_trim(qvls), " ") # separate
   qvls <- as.integer(qvls[[1]]) + 33
-  qvls <- paste(sapply(qvls, intToUtf8), collapse = "")
+  qvls <- paste(vapply(qvls, intToUtf8, ""), collapse = "")
 
   # prepare id line
   filebase <- stringr::str_replace(basename(filename), ".ace", "")

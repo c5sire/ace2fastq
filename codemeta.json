@@ -104,7 +104,7 @@
   "codeRepository": "https://github.com/c5sire/ace2fastq",
   "releaseNotes": "https://github.com/c5sire/ace2fastq/blob/master/NEWS.md",
   "readme": "https://github.com/c5sire/ace2fastq/blob/master/README.md",
-  "fileSize": "9.091KB",
+  "fileSize": "9.113KB",
   "contIntegration": [
     "https://ci.appveyor.com/project/c5sire/ace2fastq",
     "https://travis-ci.org/c5sire/ace2fastq",
