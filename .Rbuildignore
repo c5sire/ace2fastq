@@ -8,3 +8,5 @@
 ^codemeta\.json$
 ^notes\.md$
 ^cran-comments\.md$
+^doc$
+^Meta$
