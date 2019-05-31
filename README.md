@@ -5,11 +5,11 @@
 
 <!-- badges: start -->
 
-[![Project Status: Active â€“ The project has reached a stable, usable
-state and is being actively
+[![Project Status: Active Ã¢â‚¬â€œ The project has reached a stable,
+usable state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/c5sire/ace2fastq?branch=master&svg=true)](https://ci.appveyor.com/project/c5sire/ace2fastq)
 [![Travis build
@@ -20,7 +20,12 @@ coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)]
 <!-- badges: end -->
 
 The package provides a function that converts “.ace” files (ABI Sanger
-capillary sequence assembly files) to standard “.fastq” files.
+capillary sequence assembly files) to standard “.fastq” files. The file
+format is currently used in genomics to store contigs. To the best of
+our knowledge, no R function is available to convert this format into
+the more popular fastq file format. The development was motivated in the
+context of the analysis of 16S metagenomic data by the need to convert
+the .ace files for further analysis.
 
 ## Installation
 

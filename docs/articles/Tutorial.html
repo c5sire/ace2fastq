@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ace2fastq</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0</span>
       </span>
     </div>
 
@@ -94,7 +94,7 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<p>The package provides a function that converts “.ace” files (ABI Sanger capillary sequence assembly files) to standard “.fastq” files. The file format is currently used in genomics to store contigs. To the best of our knowledge, no R function is available to convert this format into the more popular fastq file format. The development was motivated in the context of the analysis of 16S metagenomic data by the need to convert the .ace files received from a sequencing service for further analysis. Each file only contains one sequence and corresponding quality values.</p>
+<p>The package provides a function that converts “.ace” files (ABI Sanger capillary sequence assembly files) to standard “.fastq” files. The file format is currently used in genomics to store contigs. To the best of our knowledge, no R function is available to convert this format into the more popular fastq file format. The development was motivated in the context of the analysis of 16S metagenomic data by the need to convert the .ace files with contig data for further analysis. Each file only contains one sequence and corresponding quality values.</p>
 <p>The function expects as a minimum a full path to the .ace file. By default a corresponding file with .fastq extension instead of .ace will be created. Also by default, the id line in the fastq file start after the obligatory @ with the name of the original .ace file without the extension followed by the internal original id from the .ace file.</p>
 <p>A default example follows:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ace2fastq)</a>

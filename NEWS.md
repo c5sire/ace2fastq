@@ -1,3 +1,7 @@
+# ace2fastq 0.4.0
+
+* Revised documentation
+
 # ace2fastq 0.2.0
 
 * Added more tests.
