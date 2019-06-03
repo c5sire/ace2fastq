@@ -11,11 +11,12 @@
 #' @export
 #'
 #' @examples
-#' if (interactive()) {
+#' 
 #'   library(ace2fastq)
 #'   filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
-#'   ace_to_fastq(filename)
-#' }
+#'  
+#'   ace_to_fastq(filename, target_dir = tempdir())
+#' 
 ace_to_fastq <- function(filename,
                          target_dir = dirname(filename),
                          name2id = TRUE) {
