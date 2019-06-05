@@ -5,8 +5,8 @@
 
 <!-- badges: start -->
 
-[![Project Status: Active Ã¢â‚¬â€œ The project has reached a stable,
-usable state and is being actively
+[![Project Status: Active ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ The project has reached a
+stable, usable state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
@@ -17,6 +17,9 @@ status](https://travis-ci.org/c5sire/ace2fastq.svg?branch=master)](https://travi
 [![Codecov test
 coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)](https://codecov.io/gh/c5sire/ace2fastq?branch=master)
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ace2fastq)](https://cran.r-project.org/package=ace2fastq)
+[![Downloads](https://cranlogs.r-pkg.org/badges/ace2fastq)](https://cran.rstudio.com/web/packages/ace2fastq/index.html)
 <!-- badges: end -->
 
 The package provides a function that converts “.ace” files (ABI Sanger
