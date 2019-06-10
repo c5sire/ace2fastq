@@ -1,7 +1,7 @@
 Package: ace2fastq
 Type: Package
 Title: ACE File to FASTQ Converter
-Version: 0.5.1
+Version: 0.5.2
 Authors@R: person("Reinhard", "Simon", email = "rsimon64@gmail.com",
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0002-4608-9077")

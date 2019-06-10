@@ -1,3 +1,7 @@
+# ace2fastq 0.5.2
+
+* fixed bug in README
+
 # ace2fastq 0.5.1
 
 * example revision
