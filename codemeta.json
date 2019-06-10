@@ -8,7 +8,7 @@
   "description": "The ACE file format is currently used in genomics\n  to store contigs from ABI sequencing machines. \n  To the best of our knowledge, no R function is available to convert \n  this format into the more popular fastq file format. \n  The development was motivated in the context of the analysis of \n  16S metagenomic data by the need to convert the ACE files received\n  from a sequencing service for further analysis.",
   "name": "ace2fastq: ACE File to FASTQ Converter",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",

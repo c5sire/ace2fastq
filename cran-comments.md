@@ -1,4 +1,7 @@
 ## Resubmission
+* added tempdir() to README as pointed out by CRAN reviewer
+
+## Resubmission
 * removed if clause interactive from example as requested by CRAN reviewer
 
 ## Test environments
