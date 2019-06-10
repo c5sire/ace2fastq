@@ -1,6 +1,6 @@
 # ace2fastq 0.5.3
 
-* updated doc
+* updated tutorial
 
 # ace2fastq 0.5.2
 
