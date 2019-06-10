@@ -17,8 +17,8 @@ status](https://travis-ci.org/c5sire/ace2fastq.svg?branch=master)](https://travi
 [![Codecov test
 coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)](https://codecov.io/gh/c5sire/ace2fastq?branch=master)
 
-\[![CRAN
-status](https://www.r-pkg.org/badges/version/ace2fastq)\]<https://CRAN.R-project.org/package=ace2fastq>)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ace2fastq)](https://CRAN.R-project.org/package=ace2fastq)
 [![Downloads](https://cranlogs.r-pkg.org/badges/ace2fastq)](https://cran.rstudio.com/web/packages/ace2fastq/index.html)
 <!-- badges: end -->
 
