@@ -42,3 +42,14 @@ test_that("error checks on parameters work", {
                  name2id = "x")
   )
 })
+
+
+test_that("output to stdout works", {
+  txt <- ace_to_fastq(
+    filename = filename, target_dir = 'stdout',
+    name2id = FALSE
+  )
+  id_expected <- "@CO Contig1 1489 2 12 U"
+  
+  expect_true(id_expected == txt[1])
+})

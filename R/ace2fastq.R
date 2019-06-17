@@ -22,7 +22,7 @@ ace_to_fastq <- function(filename,
                          name2id = TRUE) {
   stopifnot(stringr::str_ends(filename, ".ace"))
   stopifnot(file.exists(filename))
-  stopifnot(dir.exists(target_dir))
+  stopifnot(target_dir == "stdout" | dir.exists(target_dir))
   stopifnot(is.logical(name2id))
   
 
@@ -57,8 +57,12 @@ ace_to_fastq <- function(filename,
   txt[4] <- qvls
 
   # write fastq
-  target_name <- file.path(target_dir, paste0(filebase, ".fastq"))
-  writeLines(text = txt, con = target_name)
-
-  return(target_name)
+  if (target_dir == "stdout") {
+    return(print(txt))
+  } else {
+    target_name <- file.path(target_dir, paste0(filebase, ".fastq"))
+    writeLines(text = txt, con = target_name)
+    return(target_name)
+  }
+  
 }
