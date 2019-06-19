@@ -61,6 +61,7 @@ ace_to_fastq <- function(filename,
   # make list for all seqs
   
   seqs <- list(n_of_contigs)
+  class(seqs) <- "ace2fastq"
   filebase <- stringr::str_replace(basename(filename), ".ace", "")
   
   for (i in 1:n_of_contigs) {
@@ -98,7 +99,10 @@ ace_to_fastq <- function(filename,
   } else {
     target_name <- file.path(target_dir, paste0(filebase, ".fastq"))
     writeLines(text = unlist(seqs), con = target_name)
-    return(list("path" = target_name))
+    
+    res <- list("path" = target_name)
+    class(res) <- "ace2fastq"
+    return(res)
   }
   
 }

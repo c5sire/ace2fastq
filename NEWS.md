@@ -4,6 +4,7 @@
 
 * target_dir parameter accepts a special value 'stdout' to print to console. This is useful for 'piping' in bioinformatics applications
 * extracts now all contigs in an .ace file
+* added print method to display all IDs
 
 ## Changes
 * returned object is of type list (instead of character)
