@@ -1,3 +1,13 @@
+# ace2fastq 0.6.0
+
+## New Features
+
+* target_dir parameter accepts a special value 'stdout' to print to console. This is useful for 'piping' in bioinformatics applications
+
+## Fixes
+
+* URL format for CRAN self reference uses now the recommended format
+
 # ace2fastq 0.5.3
 
 * updated tutorial

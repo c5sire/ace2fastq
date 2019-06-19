@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ace2fastq</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.0</span>
       </span>
     </div>
 
@@ -113,10 +113,10 @@
 <a class="sourceLine" id="cb4-2" title="2"></a>
 <a class="sourceLine" id="cb4-3" title="3">filename &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"sampledat/1.seq.ace"</span>, <span class="dt">package =</span> <span class="st">"ace2fastq"</span>)</a>
 <a class="sourceLine" id="cb4-4" title="4"></a>
-<a class="sourceLine" id="cb4-5" title="5">out_file &lt;-<span class="st"> </span><span class="kw"><a href="../reference/ace_to_fastq.html">ace_to_fastq</a></span>(<span class="dt">filename =</span> filename, <span class="dt">target_dir =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/tempfile">tempdir</a></span>())</a>
+<a class="sourceLine" id="cb4-5" title="5">out_file &lt;-<span class="st"> </span><span class="kw"><a href="../reference/ace_to_fastq.html">ace_to_fastq</a></span>(<span class="dt">filename =</span> filename, <span class="dt">target_dir =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/tempfile">tempdir</a></span>(), <span class="dt">name2id =</span> <span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb4-6" title="6"></a>
 <a class="sourceLine" id="cb4-7" title="7">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a></code></pre></div>
-<pre><code>#&gt; [1] "@1.seq CO Contig1 1489 2 12 U"</code></pre>
+<pre><code>#&gt; [1] "@CO Contig1 1489 2 12 U"</code></pre>
 <p>The target directory path can also be changed.</p>
 </div>
   </div>
