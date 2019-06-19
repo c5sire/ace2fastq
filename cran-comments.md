@@ -1,5 +1,6 @@
 ## Resubmission
-* added tempdir() to README as pointed out by CRAN reviewer
+* changed CRAN URL to canonical form
+* No DOI for method paper yet available
 
 ## Resubmission
 * added tempdir() to README as pointed out by CRAN reviewer
