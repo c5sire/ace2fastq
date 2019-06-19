@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)](https://codecov.io/gh/c5sire/ace2fastq?branch=master)
 
 [![CRAN status](https://www.r-pkg.org/badges/version/ace2fastq)](https://CRAN.R-project.org/package=ace2fastq)
-[![Downloads](https://cranlogs.r-pkg.org/badges/ace2fastq)](https://cran.rstudio.com/web/packages/ace2fastq/index.html)
+[![Downloads](https://cranlogs.r-pkg.org/badges/ace2fastq)](https://CRAN.R-project.org/package=ace2fastq)
 <!-- badges: end -->
 
 The package provides a function that converts ".ace" files (ABI Sanger capillary sequence assembly files) to standard ".fastq" files. The file format is currently used in genomics to store contigs. To the best of our knowledge, no R function is available to convert this format into the more popular fastq file format. The development was motivated in the context of the analysis of 16S metagenomic data by the need to convert the .ace files for further analysis.
@@ -57,7 +57,7 @@ filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 
 out_file <- ace_to_fastq(filename, target_dir = tempdir())
 
-lines <- readLines(out_file)
+lines <- readLines(out_file$path)
 ```
 
 ```{r echo=FALSE}

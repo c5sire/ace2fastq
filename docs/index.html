@@ -95,7 +95,7 @@
 <a href="#ace2fastq" class="anchor"></a>ace2fastq</h1></div>
 <!-- badges: start -->
 
-<p><a href="https://CRAN.R-project.org/package=ace2fastq"><img src="https://www.r-pkg.org/badges/version/ace2fastq" alt="CRAN status"></a> <a href="https://cran.rstudio.com/web/packages/ace2fastq/index.html"><img src="https://cranlogs.r-pkg.org/badges/ace2fastq" alt="Downloads"></a> <!-- badges: end --></p>
+<p><a href="https://CRAN.R-project.org/package=ace2fastq"><img src="https://www.r-pkg.org/badges/version/ace2fastq" alt="CRAN status"></a> <a href="https://CRAN.R-project.org/package=ace2fastq"><img src="https://cranlogs.r-pkg.org/badges/ace2fastq" alt="Downloads"></a> <!-- badges: end --></p>
 <p>The package provides a function that converts “.ace” files (ABI Sanger capillary sequence assembly files) to standard “.fastq” files. The file format is currently used in genomics to store contigs. To the best of our knowledge, no R function is available to convert this format into the more popular fastq file format. The development was motivated in the context of the analysis of 16S metagenomic data by the need to convert the .ace files for further analysis.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -118,7 +118,7 @@
 <a class="sourceLine" id="cb3-5" title="5"></a>
 <a class="sourceLine" id="cb3-6" title="6">out_file &lt;-<span class="st"> </span><span class="kw"><a href="reference/ace_to_fastq.html">ace_to_fastq</a></span>(filename, <span class="dt">target_dir =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/tempfile">tempdir</a></span>())</a>
 <a class="sourceLine" id="cb3-7" title="7"></a>
-<a class="sourceLine" id="cb3-8" title="8">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file)</a></code></pre></div>
+<a class="sourceLine" id="cb3-8" title="8">lines &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(out_file<span class="op">$</span>path)</a></code></pre></div>
 <pre><code>#&gt; [1] "@1.seq CO Contig1 1489 2 12 U"
 #&gt; [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"
 #&gt; [1] "+"

@@ -1,12 +1,14 @@
 #' ace_to_fastq
 #' 
-#' Converts a sequence in .ace file format to .fastq format.
+#' Converts one or more contig sequences in .ace file format to .fastq format.
+#' The parameter target_dir has a special value 'stdout' which will just return
+#' the contigs as a list.
 #'
 #' @param filename .ace file
-#' @param target_dir target directory
+#' @param target_dir target directory or stdout
 #' @param name2id use the file name as primary id or not. Default is TRUE.
 #' @importFrom stringr str_ends str_trim str_replace
-#' @return target file name
+#' @return list
 #' @author Reinhard Simon
 #' @export
 #'
@@ -15,7 +17,7 @@
 #'   library(ace2fastq)
 #'   filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 #'  
-#'   ace_to_fastq(filename, target_dir = tempdir())
+#'   fileout <- ace_to_fastq(filename, target_dir = tempdir())
 #' 
 ace_to_fastq <- function(filename,
                          target_dir = dirname(filename),
@@ -25,44 +27,78 @@ ace_to_fastq <- function(filename,
   stopifnot(target_dir == "stdout" | dir.exists(target_dir))
   stopifnot(is.logical(name2id))
   
-
   lines <- readLines(filename)
-
-  # read and combine sequences
-  id <- stringr::str_trim(lines[3])
-  eofs <- which(lines == "")[2] # get start of sequence lines
-  seqs <- paste(lines[4:eofs], collapse = "") # get all sequence lines
-
-  # read, combine, and transform quality values
-  svls <- eofs + 2 # get start of quality value lines
-  evls <- which(lines == "")[3] # get end of sequence lines
-  qvls <- paste(lines[svls:evls], collapse = "") # get all quality lines
-  qvls <- stringr::str_split(stringr::str_trim(qvls), " ") # separate
-  qvls <- as.integer(qvls[[1]]) + 33
-  qvls <- paste(vapply(qvls, intToUtf8, ""), collapse = "")
-
-  # prepare id line
-  filebase <- stringr::str_replace(basename(filename), ".ace", "")
-  if (name2id) {
-    id <- paste0("@", filebase, " ", id)
-  } else {
-    id <- paste0("@", id)
+  
+  n_of_contigs <- as.integer(stringr::str_split(lines[1], " ")[[1]][2])
+  
+  n_CO <- which(stringr::str_starts(lines, "CO", ))
+  n_BQ <- which(stringr::str_starts(lines, "BQ"))
+  
+  # get end of BQ
+  get_EQ <- function(BQ) {
+    empty_lines <- which(lines == "")
+    return(empty_lines[empty_lines > BQ][1] - 1 )
   }
+  
+  get_id <- function(start) {
+    id <- stringr::str_trim(lines[start])
+    return(id)
+  }
+  
+  get_seq <- function(start, end) {
+    seq <- paste(lines[start:end], collapse = "") # get all sequence lines
+    return(seq)
+  }
+  
+  get_qal <- function(start, end) {
+    qvls <- paste(lines[start:end], collapse = "") # get all quality lines
+    qvls <- stringr::str_split(stringr::str_trim(qvls), " ") # separate
+    qvls <- as.integer(qvls[[1]]) + 33
+    qvls <- paste(vapply(qvls, intToUtf8, ""), collapse = "")
+    return(qvls)
+  }
+  
+  # make list for all seqs
+  
+  seqs <- list(n_of_contigs)
+  filebase <- stringr::str_replace(basename(filename), ".ace", "")
+  
+  for (i in 1:n_of_contigs) {
+    start <- n_CO[i]
+    sid <- get_id(start)
+    
+    if (name2id) {
+      sid <- paste0("@", filebase, " ", sid)
+    } else {
+      sid <- paste0("@", sid)
+    }
+    
+    start <- n_CO[i] + 1
+    end <- n_BQ[i] - 2
+    seq <- get_seq(start, end)
+    
+    start <- n_BQ[i] + 1
+    end <- get_EQ(n_BQ[i])
+    qal <- get_qal(start, end)
+    
+    fq <- character(4)
+    fq[1] <- sid
+    fq[2] <- seq
+    fq[3] <- "+"
+    fq[4] <- qal
+    
+    
+    seqs[[i]] <- fq
+    names(seqs)[i] <- sid
+  }
+  
 
-  # prepare resulting final fastq lines
-  txt <- character(4)
-  txt[1] <- id
-  txt[2] <- seqs
-  txt[3] <- "+"
-  txt[4] <- qvls
-
-  # write fastq
   if (target_dir == "stdout") {
-    return(print(txt))
+    return(seqs)
   } else {
     target_name <- file.path(target_dir, paste0(filebase, ".fastq"))
-    writeLines(text = txt, con = target_name)
-    return(target_name)
+    writeLines(text = unlist(seqs), con = target_name)
+    return(list("path" = target_name))
   }
   
 }

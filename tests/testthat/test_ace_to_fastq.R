@@ -4,13 +4,13 @@ testdir <- tempdir()
 
 test_that("conversion works", {
   target_name <- ace_to_fastq(filename = filename, target_dir = testdir)
-  file.info(target_name)
+  file.info(target_name$path)
 
-  expect_true(file.exists(target_name))
-  expect_true(file.info(target_name)$size > 3000)
+  expect_true(file.exists(target_name$path))
+  expect_true(file.info(target_name$path)$size > 3000)
 
   id_expected <- "@1.seq CO Contig1 1489 2 12 U"
-  txt <- readLines(target_name)
+  txt <- readLines(target_name$path)
 
   expect_true(id_expected == txt[1])
 })
@@ -21,7 +21,7 @@ test_that("id parameter works", {
     name2id = FALSE
   )
   id_expected <- "@CO Contig1 1489 2 12 U"
-  txt <- readLines(target_name)
+  txt <- readLines(target_name$path)
 
   expect_true(id_expected == txt[1])
 })
@@ -51,5 +51,5 @@ test_that("output to stdout works", {
   )
   id_expected <- "@CO Contig1 1489 2 12 U"
   
-  expect_true(id_expected == txt[1])
+  expect_true(id_expected == txt[[1]][1])
 })

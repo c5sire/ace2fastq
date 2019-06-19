@@ -19,7 +19,7 @@ coverage](https://codecov.io/gh/c5sire/ace2fastq/branch/master/graph/badge.svg)]
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ace2fastq)](https://CRAN.R-project.org/package=ace2fastq)
-[![Downloads](https://cranlogs.r-pkg.org/badges/ace2fastq)](https://cran.rstudio.com/web/packages/ace2fastq/index.html)
+[![Downloads](https://cranlogs.r-pkg.org/badges/ace2fastq)](https://CRAN.R-project.org/package=ace2fastq)
 <!-- badges: end -->
 
 The package provides a function that converts “.ace” files (ABI Sanger
@@ -59,7 +59,7 @@ filename <- system.file("sampledat/1.seq.ace", package = "ace2fastq")
 
 out_file <- ace_to_fastq(filename, target_dir = tempdir())
 
-lines <- readLines(out_file)
+lines <- readLines(out_file$path)
 ```
 
     #> [1] "@1.seq CO Contig1 1489 2 12 U"
