@@ -40,6 +40,11 @@ ace_to_fastq <- function(filename,
     return(empty_lines[empty_lines > BQ][1] - 1 )
   }
   
+  get_EC <- function(CO) {
+    empty_lines <- which(lines == "")
+    return(empty_lines[empty_lines > CO][1] - 1 )
+  }
+  
   get_id <- function(start) {
     id <- stringr::str_trim(lines[start])
     return(id)
@@ -75,7 +80,7 @@ ace_to_fastq <- function(filename,
     }
     
     start <- n_CO[i] + 1
-    end <- n_BQ[i] - 2
+    end <- get_EC(n_CO[i])
     seq <- get_seq(start, end)
     
     start <- n_BQ[i] + 1

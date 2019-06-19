@@ -7,9 +7,9 @@ test_that("conversion works", {
   file.info(target_name$path)
 
   expect_true(file.exists(target_name$path))
-  expect_true(file.info(target_name$path)$size > 3000)
+  expect_true(file.info(target_name$path)$size > 2000)
 
-  id_expected <- "@1.seq CO Contig1 1489 2 12 U"
+  id_expected <- "@1.seq CO Contig1 1475 8 156 U"
   txt <- readLines(target_name$path)
 
   expect_true(id_expected == txt[1])
@@ -20,7 +20,7 @@ test_that("id parameter works", {
     filename = filename, target_dir = testdir,
     name2id = FALSE
   )
-  id_expected <- "@CO Contig1 1489 2 12 U"
+  id_expected <- "@CO Contig1 1475 8 156 U"
   txt <- readLines(target_name$path)
 
   expect_true(id_expected == txt[1])
@@ -49,7 +49,7 @@ test_that("output to stdout works", {
     filename = filename, target_dir = 'stdout',
     name2id = FALSE
   )
-  id_expected <- "@CO Contig1 1489 2 12 U"
+  id_expected <- "@CO Contig1 1475 8 156 U"
   
   expect_true(id_expected == txt[[1]][1])
 })
