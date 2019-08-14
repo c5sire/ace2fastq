@@ -66,3 +66,6 @@ lines <- readLines(out_file$path)
     #> [1] "gctccctgatgttagcggcggACGGGTGAGTAACACGTGGG"
     #> [1] "+"
     #> [1] "!!!!!!!!!!!!!!!!!!!!!DUNUUUUUUUNUDIIIUUUU"
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTgwMjg0MTg4MF19
+-->
